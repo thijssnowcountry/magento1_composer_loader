@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Tdj_Composerloader>
+      <version>0.1.0</version>
+    </Tdj_Composerloader>
+  </modules>
+  <global>
+    <helpers>
+      <composerloader>
+        <class>Tdj_Composerloader_Helper</class>
+      </composerloader>
+    </helpers>
+	<models>
+	  <composerloader>
+		<class>Tdj_Composerloader_Model</class>
+		<resourceModel>composerloader_mysql4</resourceModel>
+	  </composerloader>
+	</models>
+    <events>
+	  <controller_front_init_before> <!-- identifier of the event we want to catch -->
+        <observers>
+          <composerloader_lib_load> <!-- identifier of the event handler -->
+            <type>singleton</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>composerloader/observer</class> <!-- observers class alias -->
+            <method>controllerFrontInitBefore</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </composerloader_lib_load>
+        </observers>
+      </controller_front_init_before>
+    </events>
+  </global>
+</config> 

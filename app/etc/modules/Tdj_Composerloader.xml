@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Tdj_Composerloader>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Tdj_Composerloader>
+  </modules>
+</config>
