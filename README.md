@@ -1,18 +1,19 @@
-# magento1 composer 
+# Magento1 composer 
 Very small implementation to be able to use composer PHP packages and classes in magento. If you want to use composer to be able to install magento modules, please take a look at https://github.com/Cotya/magento-composer-installer .
 
-# usage
-Goto lib/Composer folder magento
-Execute composer installer,  see: https://getcomposer.org/download/
+# Usage
+Step 1: Goto lib/Composer folder magento and excute composer installer,  see: https://getcomposer.org/download/
+Step 2: Install composer packages you need (see example)
 
-Install composer packages 
+# Example
+In this example, i am using the [piquer exact client](https://github.com/picqer/exact-php-client).
 
-
-# example
-Example of using the piquer exact client
-In your shell: 
+Step one: execute in shell: 
+```
     composer require picqer/exact-php-client
+```
     
 Usage in code: 
-      $item = new \Picqer\Financials\Exact\GLAccount($this->connect());
-     
+```php
+      $item = new \Picqer\Financials\Exact\GLAccount($connection);
+```     
